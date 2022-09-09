@@ -35,17 +35,15 @@ export class Favorites {
       throw new Error ('Usuário já cadastrado')
     }
       const user = await GithubUser.search(username)
-      console.log(user)
       //procurou o usuário e o user.login é undefined, capture o erro 
       //em seguida ele procura o catch para depositar esse erro
       if(user.login === undefined) {
-        console.log('if')
         throw new Error('Usuário não encontrado!')
       }
       //adicionar um novo usuário, utilizando o user que tenho na const
       //os 3 pontinhos significa espalhando entre as entradas que já tinha
       //nesse user coloca o usuário que estou puxando do github e todos os outros
-      //se espalham abaixo. Isso td é p respeitar o princípio da imutalidade
+      //se espalham abaixo. Isso td é p respeitar o princípio da imutabilidade
       this.entries = [ user, ...this.entries]
       this.update()
       this.save()
