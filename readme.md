@@ -4,7 +4,7 @@
 
 # 📑 Regras de negócio
 - A aplicação deve permitir adicionar usuários através do user name.
-- O usuário só pode ser adicionado mais de uma vez
+- O usuário só pode ser adicionado uma vez
 - Cada usuário deve conter imagem, nome de usuário, login, número de repositórios e número de seguidores.
 - Se o usuário for undefined não pode ser adicionado.
 - A aplicação deve permitir excluir um ou mais usuários.
